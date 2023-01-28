@@ -1,2 +1,2 @@
-# clicli.huodong
-clicli 活动集散
+# app.clicli.cc
+clicli app 发布页

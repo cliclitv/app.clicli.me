@@ -1,122 +1,149 @@
 <!DOCTYPE html>
 <html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>clicli v2-APP发布页-c站APP</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      ul,
-      li {
-        list-style: none;
-      }
-      html {
-        height: 100%;
-        background: #f4f6fa;
-      }
-      body {
-        transition: 1s;
-        height: 100%;
-        background: url(https://pic.superbed.cn/item/5cc52fce3a213b041729af94.png);
-      }
-      .main {
-        width: 900px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-      }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>clicli v2-APP发布页-c站APP</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul,
+    li {
+      list-style: none;
+    }
+
+    html {
+      height: 100%;
+      background: #f4f6fa;
+    }
+
+    body {
+      transition: 1s;
+      height: 100%;
+      /* background: url(https://pic.superbed.cn/item/5cc52fce3a213b041729af94.png); */
+    }
+
+    .main {
+      width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .left {
+      transition: 0.5s;
+    }
+
+    .right {
+      width: 360px;
+      background: url(https://ads-video-qn.xiaohongshu.com/recruit/9ddbc109e38ab385748a7e46c97d63b66e83e131) no-repeat left;
+      height: 100vh;
+      background-size: 100%;
+      margin-right: 100px;
+    }
+
+    .logo {
+      height: 100px;
+      width: 100px;
+      border-radius: 20px;
+      background: url(https://avatars.githubusercontent.com/u/40594375?s=200&v=4);
+      background-size: cover;
+      margin: 30px auto;
+    }
+
+    h1 {
+      color: #7e5fd9;
+      text-align: center;
+      font-size: 16px;
+      letter-spacing: 4px;
+      margin-top: 50px;
+    }
+
+    .link {
+      margin-top: 30px;
+    }
+
+    .link a {
+      display: inline-block;
+      text-align: center;
+      color: #7e5fd9;
+      text-decoration: none;
+      margin: 10px;
+    }
+
+    .link li {
+      text-align: center;
+      padding: 15px 30px;
+      background: rgba(148, 108, 230, 0.2);
+      display: inline-block;
+      margin: 20px auto;
+      border-radius: 4px;
+      transition: 0.5s;
+    }
+
+    .link li:hover {
+      background: #7e5fd9;
+      color: #fff;
+    }
+
+    .old {
+      font-size: 14px;
+    }
+
+    .qcode,
+    .qcode img {
+      width: 180px;
+      margin: 20px auto;
+      border-radius: 5px;
+    }
+
+    @media screen and (max-width: 500px) {
+
+      .main,
       .left {
-        transition: 0.5s;
+        width: 100%;
       }
 
       .right {
-        width: 360px;
-        background: url(https://ae01.alicdn.com/kf/H6e0e6222f3e64d77812c9223f36dfa4ez.png) no-repeat left;
-        height: 100vh;
-        background-size: 100%;
-        margin-right: 100px;
+        display: none;
       }
-      .logo {
-        height: 100px;
-        width: 100px;
-        border-radius: 20px;
-        background: url(http://ww1.sinaimg.cn/large/0065Zy9ely1gatw2cpvxwj30sg0sg0t9.jpg);
-        background-size: cover;
-        margin: 80px auto 30px;
-      }
-      h1 {
-        color: #7e5fd9;
-        text-align: center;
-        font-size: 16px;
-        letter-spacing: 4px;
-        margin-top: 50px;
-      }
-      .link {
-        margin-top: 30px;
-      }
-      .link a {
-        display: block;
-        text-align: center;
-        color: #7e5fd9;
-        text-decoration: none;
-      }
-      .link li {
-        text-align: center;
-        padding: 15px 30px;
-        background: rgba(148, 108, 230, 0.2);
-        display: inline-block;
-        margin: 20px auto;
-        border-radius: 4px;
-        transition: 0.5s;
-      }
+    }
+  </style>
+</head>
 
-      .link li:hover {
-        background: #7e5fd9;
-        color: #fff;
-      }
-
-      .old {
-        font-size: 14px;
-      }
-
-      .qcode,
-      .qcode img {
-        width: 180px;
-        margin: 20px auto;
-        border-radius: 5px;
-      }
-
-      @media screen and (max-width: 500px) {
-        .main,
-        .left {
-          width: 100%;
-        }
-        .right {
-          display: none;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="main">
-      <div class="right"></div>
-      <div class="left">
-        <div class="logo"></div>
-        <h1>人·生·就·是·佛</h1>
-        <ul class="link">
-          <a href="https://cdn.jsdelivr.net/gh/cliclitv/app.clicli.me@master/app-release.apk" target="_blank">
-            <li>clicli v2 beta</li>
+<body>
+  <div class="main">
+    <div class="right"></div>
+    <div class="left">
+      <div class="logo"></div>
+      <h1>人·生·就·是·佛</h1>
+      <ul class="link">
+        <a href="https://cdn.jsdelivr.net/npm/@clicli/app@latest/web/app-release.apk" target="_blank">
+          <li>Android.apk</li>
+        </a>
+        <a href="https://ads-video-qn.xiaohongshu.com/recruit/9a2112a6eccc4dc24a3c6bdfb0e70de562a2d8cd" target="_blank">
+          <li>IOS.ipa</li>
+        </a>
+        <div>
+          <a href="https://www.clicli.cc" target="_blank" class="old">
+            > 进入官网
           </a>
-          <a href="https://cdn.jsdelivr.net/gh/cliclitv/clicli-hybrid-app@master/bin/clicli.apk" target="_blank" class="old">
-            @豆腐 v1.1.6 下载
+          <a href="https://www.bilibili.com/video/BV19L411P7Vy" target="_blank" class="old">
+            > IOS 安装教程
           </a>
-        </ul>
-      </div>
+          <a href="https://jq.qq.com/?_wv=1027&k=oR0AoouU" target="_blank" class="old">
+            > QQ 群反馈交流
+          </a>
+        </div>
+      </ul>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
