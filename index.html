@@ -6,6 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>clicli-APP发布页-c站APP</title>
+  <script>
+    function myDownload(url, fileName) {
+      if (url) {
+        fetch(url, { method: "GET", }).then(res => {
+          return res.blob();
+        }).then(blob => {
+          let a = document.createElement("a");
+          a.href = URL.createObjectURL(blob);
+          a.download = fileName;
+          a.style.display = "none";
+          document.body.appendChild(a);
+          a.click();
+          URL.revokeObjectURL(a.href); // 释放URL 对象
+          a.remove();
+        }).catch(err => {
+          console.log(err);
+        })
+      }
+    }
+  </script>
   <style>
     * {
       margin: 0;
