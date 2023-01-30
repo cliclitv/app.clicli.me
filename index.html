@@ -25,6 +25,14 @@
         })
       }
     }
+
+    setTimeout(() => {
+      const ios = document.querySelector('#ios')
+      console.log(ios)
+      ios.addEventListener('click', () => {
+        myDownload("https://www.unpkg.com/@clicli/app@latest/web/CliCli.ipa", "CliCli.ipa")
+      })
+    })
   </script>
   <style>
     * {
@@ -148,7 +156,7 @@
         <a href="https://www.unpkg.com/@clicli/app@latest/web/app-release.apk" target="_blank" download="CliCli.apk">
           <li>Android.apk</li>
         </a>
-        <a href="https://www.unpkg.com/@clicli/app@latest/web/CliCli.ipa" target="_blank" download="CliCli.ipa">
+        <a id="ios">
           <li>IOS.ipa</li>
         </a>
         <div>
