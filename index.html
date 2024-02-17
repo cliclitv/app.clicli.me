@@ -1,156 +1,261 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>clicli-APP发布页-c站APP</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
 
-    ul,
-    li {
-      list-style: none;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>clicli-APP发布页-c站APP</title>
+    <style>
+        ul,
+        li {
+            list-style: none;
+        }
 
-    html {
-      height: 100%;
-      background: #f4f6fa;
-    }
-
-    body {
-      transition: 1s;
-      height: 100%;
-      /* background: url(https://pic.superbed.cn/item/5cc52fce3a213b041729af94.png); */
-    }
-
-    .main {
-      width: 900px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-
-    .left {
-      transition: 0.5s;
-      text-align: center;
-    }
-
-    .right {
-      width: 270px;
-      background: url(https://cdn-us.imgs.moe/2023/09/10/64fdd6241581f.jpg) no-repeat left;
-      height: 600px;
-      background-size: 100%;
-      margin-right: 100px;
-      border-radius: 10px;
-      box-shadow: 2px 2px 10px #b3a5de;
-      border: 1px solid #7e5fd9;
-    }
+        html {
+            height: 100%;
+            background: #f4f6fa;
+        }
 
 
-    .logo {
-      height: 100px;
-      width: 100px;
-      border-radius: 20px;
-      background: url(https://avatars.githubusercontent.com/u/40594375?s=200&v=4);
-      background-size: cover;
-      margin: 30px auto;
-    }
+        .left {
+            transition: 0.5s;
+            text-align: center;
+        }
 
-    h1 {
-      color: #7e5fd9;
-      text-align: center;
-      font-size: 16px;
-      letter-spacing: 4px;
-      margin-top: 50px;
-    }
+        .right {
+            width: 270px;
+            height: 600px;
+            margin-right: 100px;
+            position: relative;
+        }
 
-    .link {
-      margin-top: 30px;
-    }
 
-    .link a {
-      display: inline-block;
-      text-align: center;
-      color: #7e5fd9;
-      text-decoration: none;
-      margin: 10px;
-    }
+        .logo {
+            height: 100px;
+            width: 100px;
+            border-radius: 20px;
+            background: url(https://avatars.githubusercontent.com/u/40594375?s=200&v=4);
+            background-size: cover;
+            margin: 30px auto;
+        }
 
-    .link li {
-      text-align: center;
-      padding: 15px 30px;
-      background: rgba(148, 108, 230, 0.2);
-      display: inline-block;
-      margin: 20px auto;
-      border-radius: 4px;
-      transition: 0.5s;
-    }
+        h1 {
+            color: #7e5fd9;
+            text-align: center;
+            font-size: 16px;
+            letter-spacing: 4px;
+            margin-top: 50px;
+        }
 
-    .link li:hover {
-      background: #7e5fd9;
-      color: #fff;
-    }
+        .link {
+            margin-top: 30px;
+        }
 
-    .old {
-      font-size: 14px;
-    }
+        .link a {
+            display: inline-block;
+            text-align: center;
+            color: #7e5fd9;
+            text-decoration: none;
+            margin: 10px;
+        }
 
-    .qcode,
-    .qcode img {
-      width: 180px;
-      margin: 20px auto;
-      border-radius: 5px;
-    }
+        .link li {
+            text-align: center;
+            padding: 15px 30px;
+            background: rgba(148, 108, 230, 0.2);
+            display: inline-block;
+            margin: 20px auto;
+            border-radius: 4px;
+            transition: 0.5s;
+        }
 
-    @media screen and (max-width: 500px) {
+        .link li:hover {
+            background: #7e5fd9;
+            color: #fff;
+        }
 
-      .main,
-      .left {
-        width: 100%;
-      }
+        .old {
+            font-size: 14px;
+        }
 
-      .right {
-        display: none;
-      }
-    }
-  </style>
+        .qcode,
+        .qcode img {
+            width: 180px;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+
+        @media screen and (max-width: 500px) {
+            .left {
+                width: 100%;
+            }
+
+            .right {
+                display: none;
+            }
+        }
+
+        * {
+            /* 初始化 */
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(200deg, #eef1f5, #e6e9f0);
+        }
+
+        .swiper {
+            position: relative;
+        }
+
+        .swipe {
+            position: relative;
+            width: 270px;
+            height: 600px;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+            box-shadow: 2px 2px 10px #b3a5de;
+            border: 1px solid #7e5fd9;
+            border-radius: 10px;
+        }
+
+        .swipe ul {
+            padding: 0;
+            width: calc(270px * 3);
+            transition: 0.5s;
+        }
+
+        .swipe li {
+            float: left;
+            width: 270px;
+            height: 600px;
+            list-style: none;
+            line-height: 600px;
+            font-size: 50px;
+        }
+
+        .swipe li:nth-child(1) {
+            background-color: lightcoral;
+            background: url(https://www.pnglog.com/naKL5W.jpg);
+            background-size: cover;
+        }
+
+        .swipe li:nth-child(2) {
+            background-color: lightseagreen;
+            background: url(https://www.pnglog.com/RpR5nI.jpg);
+            background-size: cover;
+        }
+
+        .swipe li:nth-child(3) {
+            background-color: lightsalmon;
+            background: url(https://www.pnglog.com/0q853Q.jpg);
+            background-size: cover;
+        }
+
+        .slider label[for^="indicator"] {
+            /* 绝对定位 */
+            position: absolute;
+            bottom: -30px;
+            width: 14px;
+            height: 14px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .slider label[for="indicator1"] {
+            left: 40%;
+            transform: translate(-50%, 0);
+        }
+
+        .slider label[for="indicator2"] {
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        .slider label[for="indicator3"] {
+            left: 60%;
+            transform: translate(-50%, 0);
+        }
+
+        #indicator1:checked~.swipe ul {
+            margin-left: 0;
+        }
+
+        #indicator2:checked~.swipe ul {
+            margin-left: -270px;
+        }
+
+        #indicator3:checked~.swipe ul {
+            margin-left: -540px;
+        }
+
+        #indicator1:checked~label[for="indicator1"] {
+            background-color: #7e5fd9;
+        }
+
+        #indicator2:checked~label[for="indicator2"] {
+            background-color: #7e5fd9;
+        }
+
+        #indicator3:checked~label[for="indicator3"] {
+            background-color: #7e5fd9;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="main">
-    <div class="right"></div>
-    <div class="left">
-      <div class="logo"></div>
-      <h1>人·生·就·是·佛</h1>
-      <ul class="link">
-        <!-- <a href="https://pan.quark.cn/s/8a92d8c0a8d5" target="_blank"> -->
-<a href="https://wwr.lanzoui.com/b038n1afg" target="_blank">
-          <li>Android.apk</li>
-        </a>
-        <a href="https://wwr.lanzoui.com/b038n1ahi" target="_blank">
-          <li>IOS.ipa</li>
-        </a>
-        <div>
-          <a href="https://www.clicli.cc" target="_blank" class="old">
-            > 进入官网
-          </a>
-          <a href="https://www.bilibili.com/video/BV19L411P7Vy" target="_blank" class="old">
-            > IOS 安装教程
-          </a>
-          <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=jQ5UINcJCGRyk98TW-pbFf03CDhSGO0Z&authKey=pPk%2FsfANp%2FrxSQcINzIUyUVUzObNPcb8J7xN9Pmoo%2FCzVqQqG9O%2B%2FGEt%2FVnm6YgQ&noverify=0&group_code=399395607" target="_blank" class="old">
-            > QQ 群反馈交流
-          </a>
+    <div class="right">
+        <div class="slider">
+            <input type="radio" name="indicator" id="indicator1" hidden checked>
+            <label for="indicator1"></label>
+            <input type="radio" name="indicator" id="indicator2" hidden>
+            <label for="indicator2"></label>
+            <input type="radio" name="indicator" id="indicator3" hidden>
+            <label for="indicator3"></label>
+            <div class="swipe">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
         </div>
-      </ul>
     </div>
-  </div>
+    <div class="left">
+        <div class="logo"></div>
+        <h1>番组计划 / 里世界 / C岛</h1>
+        <ul class="link">
+            <!-- <a href="https://pan.quark.cn/s/8a92d8c0a8d5" target="_blank"> -->
+            <a href="https://wwr.lanzoui.com/b038n1afg" target="_blank">
+                <li>Android.apk</li>
+            </a>
+            <a href="https://wwr.lanzoui.com/b038n1ahi" target="_blank">
+                <li>IOS.ipa</li>
+            </a>
+            <div>
+                <a href="https://www.clicli.cc" target="_blank" class="old">
+                    > 进入官网
+                </a>
+                <a href="https://www.bilibili.com/video/BV19L411P7Vy" target="_blank" class="old">
+                    > IOS 安装教程
+                </a>
+                <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=jQ5UINcJCGRyk98TW-pbFf03CDhSGO0Z&authKey=pPk%2FsfANp%2FrxSQcINzIUyUVUzObNPcb8J7xN9Pmoo%2FCzVqQqG9O%2B%2FGEt%2FVnm6YgQ&noverify=0&group_code=399395607"
+                    target="_blank" class="old">
+                    > QQ 群反馈交流
+                </a>
+            </div>
+        </ul>
+    </div>
 </body>
 
 </html>
